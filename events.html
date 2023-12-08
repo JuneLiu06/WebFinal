@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Events | InnovateArt</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <nav class="navbar">
+            <div class="nav-container">
+                <a href="/index.html" class="nav-logo">InnovateArt</a>
+                <ul class="nav-menu">
+                    <li><a href="/index.html">Featured Art</a></li>
+                    <li><a href="/gallery.html">Gallery</a></li>
+                    <li><a href="/artists.html">Artists</a></li>
+                    <li><a href="/community.html">Community</a></li>
+                    <li><a href="/events.html">Events</a></li>
+                </ul>
+            </div>
+        </nav> 
+    </header>
+    <div class="hero">
+        <!-- Hero Images Here -->
+        <div class="hero-content">
+            <h1>Discover Digital Artistry</h1>
+            
+            <p>Immerse yourself in the world of digital exhibitions and explore the forefront of artistic innovation.</p>
+            <a href="#events-section" class="hero-button">View Events</a>
+            
+        </div>
+
+        <div class="hero-image active" style="background-image: url('images/LaTurbo\ Avedon1.png');"></div>
+        <div class="hero-image" style="background-image: url('images/Marjan\ Moghaddam.jpg');"></div>
+        <div class="hero-image" style="background-image: url('images/Loish\ \(Lois\ van\ Baarle\)\ .jpg');"></div>
+        <!-- Add more images as needed -->
+    </div>
+
+    <main class="events-section">
+        <div class="event-cards-container">
+            <!-- Event Card 1 -->
+            <div class="event-card">
+                <div class="event-content">
+                    <h3>Digital Art Revolution</h3>
+                    <p>Join us on April 5th to explore how digital art is reshaping the future of creativity. Featuring keynote speaker Rafael Grampá.</p>
+                </div>
+                <div class="event-image">
+                    <img src="images/Rafael Grampá.jpg.webp" alt="Digital Art Revolution">
+                </div>
+            </div>
+            
+            <div class="event-card">
+                <div class="event-content">
+                    <h3>Virtual Realities: A New Frontier</h3>
+                    <p>Experience the fusion of art and technology on May 16th. Discover the immersive worlds created by LaTurbo Avedon.</p>
+                </div>
+                <div class="event-image">
+                    <img src="images/LaTurbo Avedon2.jpg" alt="Virtual Realities: A New Frontier">
+                </div>
+            </div>
+            
+           
+        </div>
+    </main>
+ <footer>
+    <div class="footer-content">
+        <h3>About InnovateArt</h3>
+        <p>InnovateArt is a premier online destination for discovering, discussing, and displaying experimental digital art. Our platform connects artists and art enthusiasts, providing a space for showcasing groundbreaking digital artwork and fostering a vibrant community of creative minds.</p>
+        <p>Explore our galleries, learn from our resources, and join the conversation about the evolving world of digital art.</p>
+    </div>
+</footer>
+    <script>
+        document.addEventListener('DOMContentLoaded', () => {
+    let current = 0;
+    const images = document.querySelectorAll('.hero .hero-image');
+    const total = images.length;
+
+    setInterval(() => {
+        images[current].classList.remove('active');
+        current = (current + 1) % total;
+        images[current].classList.add('active');
+    }, 3000); // Change image every 3 seconds
+});
+    </script>
+</body>
+</html>
